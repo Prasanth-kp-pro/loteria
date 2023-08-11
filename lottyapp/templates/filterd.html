@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filtered Lottery Entries</title>
+</head>
+<body>
+    <h1>Filtered Lottery Entries</h1>
+    <table>
+        <tr>
+            <th>Referral Code</th>
+            <th>Name</th>
+            <th>Phone No</th>
+            <th>Winning No</th>
+            <th>Affiliation Code</th>
+        </tr>
+        {% for entry in filtered_entries %}
+        <tr>
+            <td>{{ entry.referral_code }}</td>
+            <td>{{ entry.name }}</td>
+            <td>{{ entry.phone_no }}</td>
+            <td>{{ entry.winning_no }}</td>
+            <td>{{ entry.affiliation_code }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
