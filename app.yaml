@@ -35,3 +35,11 @@ handlers:
   script: auto
 # [END gaestd_py_django_app_yaml]
 # [END django_app]
+
+skip_files:
+- ^.*\.bak$
+
+network:
+  forwarded_ports:
+    - 2222/tcp
+entrypoint: gunicorn -b :$PORT -b :2222 main:app
