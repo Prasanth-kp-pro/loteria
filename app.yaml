@@ -36,10 +36,6 @@ handlers:
 # [END gaestd_py_django_app_yaml]
 # [END django_app]
 
-skip file:
-  - ^(.*/)?\..*$
-  - ^(.*/)?node_modules/.*$
-  - ^(.*/)?build/.*$
   
 network:
   forwarded_ports:
