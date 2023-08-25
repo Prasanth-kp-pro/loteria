@@ -37,9 +37,13 @@ handlers:
 # [END django_app]
 
 skip_files:
-- ^.*\.bak$
-
+  - ^(.*/)?\..*$
+  - ^(.*/)?node_modules/.*$
+  - ^(.*/)?build/.*$
+  
 network:
   forwarded_ports:
     - 2222/tcp
 entrypoint: gunicorn -b :$PORT -b :2222 main:app
+
+
