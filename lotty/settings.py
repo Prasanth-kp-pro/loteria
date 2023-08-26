@@ -21,14 +21,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 
-if os.path.isfile(env_file):
-    # Use a local secret file, if provided
-
-
-    env.read_env(env_file)
-# [START_EXCLUDE]
-elif os.getenv("TRAMPOLINE_CI", None):
-    # Create local settings if running with CI, for unit testing
 
     placeholder = (
         f"SECRET_KEY=a\n"
