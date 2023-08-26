@@ -31,17 +31,8 @@ SECRET_KEY = '?c{jX<6Ip)Z=bpTf;sU*KBF$nu(.Qum*Cto+a=;dkB$C<v>@FeWg=nrJ4Y<6i$*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-APPENGINE_URL = env("APPENGINE_URL", default=None)
-if APPENGINE_URL:
-    # Ensure a scheme is present in the URL before it's processed.
-    if not urlparse(APPENGINE_URL).scheme:
-        APPENGINE_URL = f"https://{APPENGINE_URL}"
 
-    ALLOWED_HOSTS = [urlparse(APPENGINE_URL).netloc]
-    CSRF_TRUSTED_ORIGINS = [APPENGINE_URL]
-    SECURE_SSL_REDIRECT = True
-else:
-    ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
