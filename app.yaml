@@ -37,9 +37,5 @@ handlers:
 # [END django_app]
 
   
-network:
-  forwarded_ports:
-    - 2222/tcp
-entrypoint: gunicorn -b :$PORT -b :2222 main:app
 
 
