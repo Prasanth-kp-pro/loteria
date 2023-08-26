@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 
-SECRET_KEY = env("SECRET_KEY")
+SECRET_KEY = '?c{jX<6Ip)Z=bpTf;sU*KBF$nu(.Qum*Cto+a=;dkB$C<v>@FeWg=nrJ4Y<6i$*'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
