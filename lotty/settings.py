@@ -14,7 +14,7 @@ from pathlib import Path
 import io
 import os
 from urllib.parse import urlparse
-from . import env
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
