@@ -82,20 +82,12 @@ AUTH_USER_MODEL = 'lottyapp.CustomUser'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {"default": env.db()}
-
-# If the flag as been set, configure to use proxy
-if os.getenv("USE_CLOUD_SQL_AUTH_PROXY", None):
-    DATABASES["default"]["HOST"] = "127.0.0.1"
-    DATABASES["default"]["PORT"] = 5432
-
-if os.getenv("TRAMPOLINE_CI", None):
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
-        }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
+}
 
 
 
